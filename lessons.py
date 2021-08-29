@@ -148,3 +148,42 @@ print(alien_0)
 alien_0 = {'color': 'green', 'speed': 'slow'}
 point_value = alien_0.get('points', 'No point value')
 print(point_value)
+
+for key, value in alien_0.items():
+    print(f"\n Key: {key}")
+    print(f" Value: {value}")
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    'evgeniy': 'js',
+}
+
+print("\n")
+
+for lang in favorite_languages.values():
+    print(lang)
+
+print("\n")
+
+for lang in set(favorite_languages.values()):
+    print(lang)
+
+print("\n")
+
+favorite_languages = {
+    'jen': ['python', 'ruby'],
+    'sarah': ['c'],
+    'edward': ['ruby', 'js'],
+    'phil': ['python', 'php'],
+    'evgeniy': ['c', 'c++'],
+}
+
+for name, langs in favorite_languages.items():
+    print(name)
+    for lang in langs:
+        print(lang)
+
+print("# --------------- #")

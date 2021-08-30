@@ -187,3 +187,34 @@ for name, langs in favorite_languages.items():
         print(lang)
 
 print("# --------------- #")
+
+# message = input("Tell me something")
+# print(message)
+
+# name = input("Enter your name: ")
+# print(f"Hello, {name}")
+#
+# age = input("How old are you?")
+# age = int(age)
+# if age >= 18:
+#     print("Good!")
+# elif age > 30:
+#     print("Not good, you old")
+# else:
+#     print("Sorry")
+
+print("# --------------- #")
+
+current_number = 1
+while current_number <= 5:
+    print(current_number)
+    current_number += 1
+
+prompt = "\n Tell me something, and i'll repeat it..."
+prompt += "\n Enter 'quit' to end program. "
+message = ""
+while message != 'quit':
+    message = input(prompt)
+    print(message)
+
+print("# --------------- #")

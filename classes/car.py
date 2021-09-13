@@ -1,3 +1,6 @@
+"""Клас для моделирования авто"""
+
+
 class Car:
 
     def __init__(self, make, model, year):
@@ -23,19 +26,38 @@ class Car:
         self.odometer_reading += miles
 
 
-my_new_car = Car('audi', 'A4', 2019)
-print(my_new_car.get_descriptive_name())
+"""
+Наследование
+"""
 
-my_new_car.read_odometer()
 
-my_new_car.odometer_reading = 23
-my_new_car.read_odometer()
+class Battery:
 
-my_new_car.update_odometer(45)
-my_new_car.read_odometer()
+    def __init__(self, battery_size=100):
+        self.battery_size = battery_size
 
-my_new_car.update_odometer(15)
-my_new_car.read_odometer()
+    def describe_battery(self):
+        print(f"This car has a {self.battery_size}-kWh battery")
 
-my_new_car.increment_odometer(15)
-my_new_car.read_odometer()
+    def get_range(self):
+        range: int = 0
+        if self.battery_size == 75:
+            range: int = 260
+        elif self.battery_size >= 100:
+            range: int = 315
+
+        print(f"This car can go about {range} miles on full charge")
+
+
+class ElectricCar(Car):
+
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+        self.battery_size = 75
+        self.battery = Battery()
+
+    def describe_battery(self):
+        print(f"This car has a {self.battery_size}-kWh battery")
+
+    def fill_gas_tank(self):
+        print("This car doesn't need a gas tank!")

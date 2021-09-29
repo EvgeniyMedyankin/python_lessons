@@ -277,53 +277,74 @@
 # for name, response in responses.items():
 #     print(f"{name} would like to climb {response}")
 
+# print("# --------------- #")
+#
+#
+# def greet_user():
+#     print('Hello World!')
+#
+#
+# greet_user()
+#
+#
+# def greet_user(username='Jessy'):
+#     print(f"Hello, {username.title()}")
+#
+#
+# greet_user()
+# greet_user('tom')
+#
+#
+# def get_formatted_name(first_name, last_name=''):
+#     full_name = f"{first_name} {last_name}"
+#     return full_name.title()
+#
+#
+# to_format = get_formatted_name('Tom', 'Thomson')
+# print(to_format)
+#
+# to_format = get_formatted_name('Tom')
+# print(to_format)
+#
+#
+# def make_pizza(*toppings):
+#     print(toppings)
+#     for topping in toppings:
+#         print(topping)
+#
+#
+# make_pizza('pepperoni')
+# make_pizza('mushrooms', 'pepper', 'cheese')
+#
+# print("# --------------- #")
+#
+#
+# def build_profile(first, last, **user_info):
+#     user_info['first_name'] = first
+#     user_info['last_name'] = last
+#     return user_info
+#
+#
+# user_profile = build_profile("evgeniy", "mediankin", location='Ukraine', age=31)
+# print(user_profile)
+
 print("# --------------- #")
 
+"""
+Заполнитель %s используется для представления строки (в данном случае 'Apple'), а заполнитель %d — для 
+пред-ставления целого числа (1299). Если нужно добавить пробелы перед целым числом, то можно вставить число между % и 
+d, чтобы указать желаемую длину строки. На-пример, "%5d" %(123) даст в результате " 123" (с двумя пробелами спереди и 
+длиной 5).Заполнитель %f используется для форматирования чисел с плавающей точкой (чисел с десятичными точками). 
+Здесь мы форматируем его как %4.2f, где 4 обозначает общую длину, а 2 обозначает 2 десятичных знака. Если нужно 
+добавить пробелы перед числом, можно отформа-тировать его как %7.2f, что даст "   1.24" (с 2 десятич-ными знаками, 
+3 пробелами спереди и длиной 7). 
+"""
 
-def greet_user():
-    print('Hello World!')
-
-
-greet_user()
-
-
-def greet_user(username='Jessy'):
-    print(f"Hello, {username.title()}")
-
-
-greet_user()
-greet_user('tom')
-
-
-def get_formatted_name(first_name, last_name=''):
-    full_name = f"{first_name} {last_name}"
-    return full_name.title()
-
-
-to_format = get_formatted_name('Tom', 'Thomson')
-print(to_format)
-
-to_format = get_formatted_name('Tom')
-print(to_format)
-
-
-def make_pizza(*toppings):
-    print(toppings)
-    for topping in toppings:
-        print(topping)
-
-
-make_pizza('pepperoni')
-make_pizza('mushrooms', 'pepper', 'cheese')
+brand = 'Apple'
+exchangeRate = 1.235235245
+message = 'The price of this %s laptop is %d USD' \
+          'and the exchange rate is %4.2f USD to 1 EUR' \
+          % (brand, 1299, exchangeRate)
+print(message)
 
 print("# --------------- #")
-
-
-def build_profile(first, last, **user_info):
-    user_info['first_name'] = first
-    user_info['last_name'] = last
-    return user_info
-
-
-user_profile = build_profile("evgeniy", "mediankin", location='Ukraine', age=31)
-print(user_profile)
